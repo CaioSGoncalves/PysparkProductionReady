@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  jupyter_spark:
+    container_name: "jupyter_spark"
+    image: jupyter/all-spark-notebook:latest
+    ports:
+      - 3333:8888
+    volumes:
+      - ./hdfs:/hdfs
+      - ./notebooks:/home/jovyan/work
+      - ./movies_ratings/dist:/home/jovyan/scripts
+  
+  ubuntu_container:
+    container_name: "ubuntu_container"
+    build: ./ubuntu
+    volumes:
+      - ./:/project
