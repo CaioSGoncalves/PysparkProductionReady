@@ -1,3 +1,8 @@
+all: test build
+
+test:
+	pytest tests
+
 build:
 	rm -rf ./dist && mkdir ./dist
 	cp ./main.py ./dist
