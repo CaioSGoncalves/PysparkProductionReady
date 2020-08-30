@@ -1,5 +1,10 @@
 # PysparkProductionReady
-Pyspark project structure
+
+<p align="center"> 
+<img src="images/PysparkProductionReady.png">
+</p>
+
+
 
 docker-compose up -d
 
