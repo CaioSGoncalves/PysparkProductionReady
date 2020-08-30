@@ -6,25 +6,26 @@
 
 Folders:
 
-    - movies_ratings: pyspark code folder
-    - notebooks: Jupyter Notebooks
-    - ubuntu: Ubunto Dockerfile
-    - hdfs: volume used by locally Apache Spark
+    - ./movies_ratings: pyspark code and Makefile
+    - ./notebooks: Jupyter Notebooks
+    - ./hdfs: volume used by locally Apache Spark
+    - ./ubuntu: Ubuntu Dockerfile
 
-
-Test environment:
-
-    - docker-compose up -d
-    - ubuntu_container is needed only for Windows users
-
-
-Submit spark job to Spark in Jupyter:
-
-    - cd scripts && spark-submit --py-files jobs.zip main.py --job test_submit
-    - docker exec -w /home/jovyan/scripts jupyter_spark spark-submit --py-files jobs.zip main.py --job test_submit
 
 Make:
 
-    - make build
-    - make test
-    - make all
+    - make test: run pytest tests
+    - make build: build jobs to ./dist folder
+    - make all: test and build
+
+
+Local environment:
+
+    - Apache Spark on JupyterNotebook docker container
+    - docker-compose up -d
+    - ubuntu_container is needed only for Windows users. To run "make" commands
+
+
+Submit job to Spark on Jupyter:
+
+    - docker exec -w /home/jovyan/scripts jupyter_spark spark-submit --py-files jobs.zip main.py --job test_submit
