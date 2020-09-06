@@ -15,7 +15,6 @@ def _transform_data(raw_df):
 
 
 def _load_data(config, transformed_df):
-    """ Save data to parquet file """
     (
         transformed_df.write
         .format("parquet")
@@ -25,5 +24,4 @@ def _load_data(config, transformed_df):
 
 
 def run_job(spark, config):
-    """ Run movies job """
     _load_data(config, _transform_data(_extract_data(spark, config)))

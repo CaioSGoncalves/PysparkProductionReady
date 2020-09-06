@@ -9,7 +9,7 @@ services:
     volumes:
       - ./hdfs:/hdfs
       - ./notebooks:/home/jovyan/work
-      - ./movies_ratings/dist:/home/jovyan/scripts
+      - ./src/dist:/home/jovyan/scripts
   
   ubuntu_container:
     container_name: "ubuntu_container"
