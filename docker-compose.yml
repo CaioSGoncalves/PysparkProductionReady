@@ -10,9 +10,10 @@ services:
       - ./hdfs:/hdfs
       - ./notebooks:/home/jovyan/work
       - ./src/dist:/home/jovyan/scripts
+
+  ci_container:
+    container_name: "ci_container"
+    build: 
+      context: .
+      dockerfile: ./docker/ci_container/Dockerfile
   
-  ubuntu_container:
-    container_name: "ubuntu_container"
-    build: ./ubuntu
-    volumes:
-      - ./:/project
