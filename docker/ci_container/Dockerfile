@@ -10,11 +10,16 @@ RUN apt install unzip -y
 # Create app directory
 WORKDIR /app
 
-# Bundle app source
-COPY ./ ./
+# # Bundle app source
+# COPY ./ ./
+
+COPY ./requirements.txt ./requirements.txt
 
 # Install app dependencies
 RUN pip install -r requirements.txt
 
 # Install jdk
 RUN apt install default-jdk -y
+
+# Keep running
+CMD tail -F anything

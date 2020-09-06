@@ -16,4 +16,6 @@ services:
     build: 
       context: .
       dockerfile: ./docker/ci_container/Dockerfile
+    volumes:
+      - ./:/app
   

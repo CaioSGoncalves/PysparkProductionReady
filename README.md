@@ -17,14 +17,14 @@ Make:
     - make test: run pytest tests
     - make build: build jobs to ./dist folder
     - make all: test and build
-    - docker/ci_container: container to run make build and test
+    - docker/ci_container: container to run make commands
 
 
 Local environment:
 
     - Apache Spark on JupyterNotebook docker container
     - docker-compose up -d
-    - docker/ci_container: container to run make build and test
+    - docker/ci_container: container to run make commands
 
 
 Submit job to Spark on Jupyter:
@@ -36,6 +36,6 @@ Submit job to Spark on Jupyter:
 
 CI Container:
 
-    - docker run -w /app/src pysparkproductionready_ci_container make test
-    - docker run -w /app/src pysparkproductionready_ci_container make build
-    - docker run -w /app/src pysparkproductionready_ci_container make all
+    - docker exec -w /app/src ci_container make test
+    - docker exec -w /app/src ci_container make build
+    - docker exec -w /app/src ci_container make all
