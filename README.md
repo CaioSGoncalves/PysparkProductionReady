@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"> 
-<img src="images/ci_workflow.png">
+<img src="images/ci_workflow.PNG">
 </p>
 
 
