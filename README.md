@@ -4,6 +4,7 @@
 <img src="images/PysparkProductionReady.png">
 </p>
 
+
 <p align="center"> 
 <img src="images/ci_workflow.PNG">
 </p>
@@ -13,11 +14,13 @@ Inspired by: https://youtu.be/Bp0XvA3wIXw
 
 
 Objectives:
+
     - Create a sample of a production ready PySpark project
     - Create a CI/CD pipeline for PySpark using pytest and Github Actions
 
 
 How it works:
+
     - Using "make" commands to facility test and build commands (more about "make" commands below)
     - Every Push/PR on master runs the unit tests for pyspark Jobs, build and deploy
     - It is needed to pass all dependencies pyfiles to spark-submit command
