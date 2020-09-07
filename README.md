@@ -4,12 +4,33 @@
 <img src="images/PysparkProductionReady.png">
 </p>
 
+<p align="center"> 
+<img src="images/ci_workflow.png">
+</p>
+
+
+Inspired by: https://youtu.be/Bp0XvA3wIXw
+
+
+Objectives:
+    - Create a sample of a production ready PySpark project
+    - Create a CI/CD pipeline for PySpark using pytest and Github Actions
+
+
+How it works:
+    - Using "make" commands to facility test and build commands (more about "make" commands below)
+    - Every Push/PR on master runs the unit tests for pyspark Jobs, build and deploy
+    - It is needed to pass all dependencies pyfiles to spark-submit command
+    - The build step generates .zip files and the main.py that can be passed to the spark-submit command
+
+
 Folders:
 
-    - ./movies_ratings: pyspark code and Makefile
+    - ./src: pyspark code and Makefile
     - ./notebooks: Jupyter Notebooks
     - ./hdfs: volume used by locally Apache Spark
     - ./docker: custom docker images
+    - ./.github/workflows/main.yml: Github Actions config file
 
 
 Make:
@@ -17,7 +38,6 @@ Make:
     - make test: run pytest tests
     - make build: build jobs to ./dist folder
     - make all: test and build
-    - docker/ci_container: container to run make commands
 
 
 Local environment:
