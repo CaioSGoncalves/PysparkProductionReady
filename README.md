@@ -27,7 +27,7 @@ How it works:
     - The "build" step generates .zip files and the main.py that can be passed to the spark-submit command
 
 
-The jobs's transformations can be seen in the ./notebooks folder.
+The jobs's schemas and transformations can be seen in the ./notebooks folder.
 
 
 Folders:
