@@ -21,10 +21,10 @@ Objectives:
 
 How it works:
 
-    - Using "make" commands to facility test and build commands (more about "make" commands below)
+    - Using "make" commands to easily test and build commands (more about "make" commands below)
     - Every Push/PR on master runs the unit tests for pyspark Jobs, build and deploy
-    - It is needed to pass all dependencies pyfiles to spark-submit command
-    - The build step generates .zip files and the main.py that can be passed to the spark-submit command
+    - In a Spark cluster, it is needed to pass all dependencies pyfiles to spark-submit command
+    - The "build" step generates .zip files and the main.py that can be passed to the spark-submit command
 
 
 Folders:
