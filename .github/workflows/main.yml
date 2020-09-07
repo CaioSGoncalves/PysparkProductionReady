@@ -45,4 +45,4 @@ jobs:
           
       # Deploy: 
       - name: Deploy
-        run: echo For example -> Deploy files to AWS s3 to be used by EMR or Glue ETL"
+        run: echo For example -> Deploy files to AWS s3 to be used by EMR or Glue ETL
